@@ -6,6 +6,7 @@ var Router *gin.Engine
 
 func LoadRouter() {
 	Router = gin.Default()
+	UserRouter()
 	Router.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(200, gin.H{
 			"code": 0,
